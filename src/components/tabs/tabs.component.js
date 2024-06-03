@@ -4,7 +4,7 @@ class Links extends Component {
   }
 
   static getIcon(link) {
-    const defaultColor = "#726f6f";
+    const defaultColor = "#1e1e2e";
 
     return link.icon
       ? `<i class="ti ti-${link.icon} link-icon"
@@ -16,27 +16,29 @@ class Links extends Component {
     const { categories } = tabs.find((f) => f.name === tabName);
 
     return `
-      ${
-      categories.map(({ name, links }) => {
-        return `
+      ${categories
+        .map(({ name, links }) => {
+          return `
           <li>
             <h1>${name}</h1>
               <div class="links-wrapper">
-              ${
-          links.map((link) => `
+              ${links
+                .map(
+                  (link) => `
                   <div class="link-info">
                     <a href="${link.url}">
                       ${Links.getIcon(link)}
                       ${
-            link.name ? `<p class="link-name">${link.name}</p>` : ""
-          }
+                        link.name ? `<p class="link-name">${link.name}</p>` : ""
+                      }
                     </a>
-                </div>`).join("")
-        }
+                </div>`,
+                )
+                .join("")}
             </div>
           </li>`;
-      }).join("")
-    }
+        })
+        .join("")}
     `;
   }
 }
@@ -52,16 +54,16 @@ class Category extends Component {
 
   static getAll(tabs) {
     return `
-      ${
-      tabs.map(({ name, background_url }, index) => {
-        return `<ul class="${name}" ${
-          Category.getBackgroundStyle(background_url)
-        } ${index == 0 ? "active" : ""}>
+      ${tabs
+        .map(({ name, background_url }, index) => {
+          return `<ul class="${name}" ${Category.getBackgroundStyle(
+            background_url,
+          )} ${index == 0 ? "active" : ""}>
             <div class="banner"></div>
             <div class="links">${Links.getAll(name, tabs)}</div>
           </ul>`;
-      }).join("")
-    }
+        })
+        .join("")}
     `;
   }
 }
@@ -89,7 +91,7 @@ class Tabs extends Component {
       status-bar {
           bottom: -70px;
           height: 32px;
-          background: #282828;
+          background: #1e1e2e;
           border-radius: 4px;
           box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
       }
@@ -114,7 +116,7 @@ class Tabs extends Component {
           bottom: 0;
           margin: auto;
           box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-          background: #282828;
+          background: #1e1e2e;
       }
 
       .categories {
@@ -131,7 +133,7 @@ class Tabs extends Component {
           width: 100%;
           height: 100%;
           right: 100%;
-          background: #282828 url("../img/bg-1.gif") repeat left;
+          background: #1e1e2e url("../img/bg-1.gif") repeat left;
 	        transition: all .6s;
 	        # animation: scroll 25s ease-in-out infinite;
       }
@@ -142,48 +144,20 @@ class Tabs extends Component {
           }
       }
 
-      .categories ul:nth-child(2) {
-          --flavour: #e78a4e;
+
+       .categories ul:nth-child(2) {
+          --flavour: #fab387;
       }
 
       .categories ul:nth-child(3) {
-          --flavour: #ea6962;
+          --flavour: #f38ba8;
       }
 
       .categories ul:nth-child(4) {
-          --flavour: #7daea3;
+          --flavour: #94e2d5;
       }
-
       .categories ul:nth-child(5) {
-          --flavour: #d3869b;
-      }
-
-      .categories ul:nth-child(6) {
-          --flavour: #d3869b;
-      }
-
-      .categories ul:nth-child(7) {
-          --flavour: #a9b665;
-      }
-
-      .categories ul:nth-child(8) {
-          --flavour: #e78a4e;
-      }
-
-      .categories ul:nth-child(9) {
-          --flavour: #ea6962;
-      }
-
-      .categories ul:nth-child(10) {
-          --flavour: #7daea3;
-      }
-
-      .categories ul:nth-child(11) {
-          --flavour: #d3869b;
-      }
-
-      .categories ul:nth-child(12) {
-          --flavour: #d3869b;
+          --flavour: #f5c2e7;
       }
 
       .categories ul .links {
@@ -199,7 +173,7 @@ class Tabs extends Component {
           right: 0;
           width: 70%;
           height: 100%;
-          background: #282828;
+          background: #1e1e2e;
           padding: 5%;
           flex-wrap: wrap;
       }
@@ -209,15 +183,15 @@ class Tabs extends Component {
       }
 
       .categories ul .links a {
-          color: #d4be98;
+          color: #cdd6f4;
           text-decoration: none;
           font: 700 18px 'Roboto', sans-serif;
           transition: all .2s;
           display: inline-flex;
           align-items: center;
           padding: .4em .7em;
-          background: #32302f;
-          box-shadow: 0 4px rgba(50, 48, 47, 0.5), 0 5px 10px rgb(0 0 0 / 20%);
+          background: #181825;
+          box-shadow: 0 4px rgba(24, 24, 37, 0.5), 0 5px 10px rgb(0 0 0 / 20%);
           border-radius: 2px;
           margin-bottom: .7em;
       }
@@ -266,9 +240,9 @@ class Tabs extends Component {
           margin-bottom: 1.5em;
       }
 
-      .categories .links li h1 {
-          color: #d4be98;
-	        opacity: 0.5;
+     .categories .links li h1 {
+          color: #cdd6f4;
+          opacity: 0.5;
           font-size: 13px;
           margin-bottom: 1em;
           font-weight: 600;
@@ -279,7 +253,7 @@ class Tabs extends Component {
 
       .categories .link-icon {
           font-size: 27px;
-          color: #726f6f;
+          color: #cdd6f4;
       }
 
       .categories .link-icon + .link-name {

@@ -1,7 +1,7 @@
 class Clock extends Component {
   refs = {
-    clock: '.clock-time',
-    icon: '.clock-icon'
+    clock: ".clock-time",
+    icon: ".clock-icon",
   };
 
   constructor() {
@@ -9,10 +9,7 @@ class Clock extends Component {
   }
 
   imports() {
-    return [
-      this.resources.icons.material,
-      this.resources.fonts.roboto
-    ];
+    return [this.resources.icons.material, this.resources.fonts.roboto];
   }
 
   style() {
@@ -20,12 +17,12 @@ class Clock extends Component {
         .clock-time {
             white-space: nowrap;
             font: 300 9pt 'Roboto', sans-serif;
-            color: #d4be98;
+            color: #cdd6f4;
             letter-spacing: .5px;
         }
 
         .clock-icon {
-            color: #ea6962;
+            color: #f38ba8;
             font-size: 10pt;
             margin-right: 10px;
         }
