@@ -48,7 +48,7 @@ const default_config = {
             },
             {
               name: "freetube",
-              url: "https://youtube.com/p",
+              url: "https://youtube.com/",
               icon: "brand-youtube",
               icon_color: "#f38ba8",
             },
