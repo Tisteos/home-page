@@ -36,7 +36,7 @@ const default_config = {
           links: [
             {
               name: "reddit",
-              url: "https://libreddit.bus-hit.me/",
+              url: "https://discuss.whatever.social/",
               icon: "brand-reddit",
               icon_color: "#a6e3a1",
             },
