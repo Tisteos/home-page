@@ -2,24 +2,21 @@ class Config {
   defaults = {
     overrideStorage: false,
     temperature: {
-      location: "New York",
+      location: "London",
       scale: "C",
     },
     clock: {
       format: "h:i p",
-      iconColor: "#ff7b95",
+      iconColor: "#f38ba8",
     },
     disabled: [],
     openLastVisitedTab: false,
     tabs: [],
-    keybindings: {
-      s: "search-bar",
-    },
   };
 
   config;
 
-  constructor(config) {
+  constructor (config) {
     this.config = config;
     this.storage = new Storage("config");
 
@@ -31,7 +28,7 @@ class Config {
       ...this,
       __proto__: this.__proto__,
       set: (target, prop, value) =>
-        this.settingUpdatedCallback(target, prop, value),
+        this.settingUpdatedCallback(target, prop, value)
     });
   }
 
@@ -55,12 +52,14 @@ class Config {
    * @returns {void}
    */
   autoConfig() {
-    Object.keys(this.defaults).forEach((setting) => {
+    Object.keys(this.defaults).forEach(setting => {
       if (this.canOverrideStorage(setting))
         this[setting] = this.config[setting];
-      else if (this.storage.hasValue(setting))
-        this[setting] = this.storage.get(setting);
-      else this[setting] = this.defaults[setting];
+      else
+        if (this.storage.hasValue(setting))
+          this[setting] = this.storage.get(setting);
+        else
+          this[setting] = this.defaults[setting];
     });
   }
 
@@ -70,10 +69,7 @@ class Config {
    * @returns {bool}
    */
   canOverrideStorage(setting) {
-    return (
-      setting in this.config &&
-      (this.config.overrideStorage || setting === "tabs")
-    );
+    return setting in this.config && (this.config.overrideStorage || setting === "tabs");
   }
 
   /**

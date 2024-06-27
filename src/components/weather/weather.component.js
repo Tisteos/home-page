@@ -154,8 +154,7 @@ class Weather extends Component {
   }
 
   getForecast(condition) {
-    for (const forecast of this.forecasts)
-      if (forecast.conditions.includes(condition)) return forecast;
+    for (const forecast of this.forecasts) if (forecast.conditions.includes(condition)) return forecast;
 
     return this.forecasts[0];
   }

@@ -26,11 +26,9 @@ class Links extends Component {
                 .map(
                   (link) => `
                   <div class="link-info">
-                    <a href="${link.url}">
+                    <a href="${link.url}" target="_blank">
                       ${Links.getIcon(link)}
-                      ${
-                        link.name ? `<p class="link-name">${link.name}</p>` : ""
-                      }
+                      ${link.name ? `<p class="link-name">${link.name}</p>` : ""}
                     </a>
                 </div>`,
                 )
@@ -56,9 +54,7 @@ class Category extends Component {
     return `
       ${tabs
         .map(({ name, background_url }, index) => {
-          return `<ul class="${name}" ${Category.getBackgroundStyle(
-            background_url,
-          )} ${index == 0 ? "active" : ""}>
+          return `<ul class="${name}" ${Category.getBackgroundStyle(background_url)} ${index == 0 ? "active" : ""}>
             <div class="banner"></div>
             <div class="links">${Links.getAll(name, tabs)}</div>
           </ul>`;
@@ -134,8 +130,8 @@ class Tabs extends Component {
           height: 100%;
           right: 100%;
           background: #1e1e2e url("../img/bg-1.gif") repeat left;
-	        transition: all .6s;
-	        # animation: scroll 25s ease-in-out infinite;
+          transition: all .6s;
+          # animation: scroll 25s ease-in-out infinite;
       }
 
       @keyframes scroll {
@@ -144,8 +140,7 @@ class Tabs extends Component {
           }
       }
 
-
-       .categories ul:nth-child(2) {
+      .categories ul:nth-child(2) {
           --flavour: #fab387;
       }
 
@@ -183,7 +178,7 @@ class Tabs extends Component {
       }
 
       .categories ul .links a {
-          color: #cdd6f4;
+          color: #282828;
           text-decoration: none;
           font: 700 18px 'Roboto', sans-serif;
           transition: all .2s;
@@ -240,9 +235,9 @@ class Tabs extends Component {
           margin-bottom: 1.5em;
       }
 
-     .categories .links li h1 {
+      .categories .links li h1 {
           color: #cdd6f4;
-          opacity: 0.5;
+        opacity: 0.5;
           font-size: 13px;
           margin-bottom: 1em;
           font-weight: 600;
@@ -279,7 +274,7 @@ class Tabs extends Component {
           }
           100% {
               opacity: 1;
-           }
+          }
       }
     `;
   }
@@ -291,8 +286,6 @@ class Tabs extends Component {
         <div id="panels">
           <div class="categories">
             ${Category.getAll(this.tabs)}
-            <search-bar></search-bar>
-            <config-tab></config-tab>
           </div>
           <status-bar class="!-"></status-bar>
         </div>
