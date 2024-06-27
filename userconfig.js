@@ -19,10 +19,6 @@ const default_config = {
       p: ["https://www.pinterest.es/search/pins/?q=", "Pinterest"],
     },
   },
-  keybindings: {
-    s: "search-bar",
-    q: "config-tab",
-  },
   disabled: [],
   fastlink: "https://github.com/catppuccin/catppuccin",
   openLastVisitedTab: true,
