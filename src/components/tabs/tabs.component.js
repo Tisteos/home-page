@@ -178,7 +178,7 @@ class Tabs extends Component {
       }
 
       .categories ul .links a {
-          color: #282828;
+          color: #cdd6f4;
           text-decoration: none;
           font: 700 18px 'Roboto', sans-serif;
           transition: all .2s;
