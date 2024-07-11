@@ -69,7 +69,7 @@ const default_config = {
               name: "higotv",
               url: "https://higotv.fun/",
               icon: "device-tv",
-              icon_color: "#cba6f7#",
+              icon_color: "#cba6f7",
             },
             {
               name: "animeua",
