@@ -32,7 +32,7 @@ const default_config = {
           links: [
             {
               name: "reddit",
-              url: "https://discuss.whatever.social/",
+              url: "https://reddit.com",
               icon: "brand-reddit",
               icon_color: "#a6e3a1",
             },
