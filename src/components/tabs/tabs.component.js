@@ -230,7 +230,7 @@ class Tabs extends Component {
       }
 
       .categories .links li:not(:last-child) {
-          box-shadow: 0 1px 0 rgba(205, 214, 244, .25);
+          box-shadow: 0 1px 0 #313244;
           padding: 0 0 .5em 0;
           margin-bottom: 1.5em;
       }
