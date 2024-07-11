@@ -130,22 +130,16 @@ const default_config = {
           name: "resources",
           links: [
             {
-              name: "github",
-              url: "https://github.com",
+              name: "dotfiles",
+              url: "https://github.com/Tisteos/dotfiles",
               icon: "brand-github",
               icon_color: "#a6e3a1",
             },
             {
-              name: "neptune",
-              url: "https://ui.neptune.ai",
-              icon: "circle-triangle",
-              icon_color: "#fab387",
-            },
-            {
-              name: "wakatime",
-              url: "https://wakatime.com/dashboard",
-              icon: "24-hours",
-              icon_color: "#f38ba8",
+              name: "unixporn",
+              url: "https://www.reddit.com/r/unixporn/",
+              icon: "align-box-top-right",
+              icon_color: "#cba6f7",
             },
           ],
         },
