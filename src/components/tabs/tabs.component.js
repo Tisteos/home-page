@@ -221,7 +221,7 @@ class Tabs extends Component {
           margin-bottom: .7em;
       }
     }
-
+ 
       .categories .link-info {
           display: inline-flex;
       }
