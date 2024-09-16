@@ -190,6 +190,7 @@ class Tabs extends Component {
           list-style: none;
       }
 
+      @media (prefers-color-scheme: dark) {
       .categories ul .links a {
           color: #cdd6f4;
           text-decoration: none;
@@ -203,6 +204,23 @@ class Tabs extends Component {
           border-radius: 2px;
           margin-bottom: .7em;
       }
+    }
+
+      @media (prefers-color-scheme: light) {
+      .categories ul .links a {
+          color: #c6d0f5;
+          text-decoration: none;
+          font: 700 18px 'Roboto', sans-serif;
+          transition: all .2s;
+          display: inline-flex;
+          align-items: center;
+          padding: .4em .7em;
+          background: #292c3c;
+          box-shadow: 0 4px rgba(24, 24, 37, 0.5), 0 5px 10px rgb(0 0 0 / 20%);
+          border-radius: 2px;
+          margin-bottom: .7em;
+      }
+    }
 
       .categories .link-info {
           display: inline-flex;
