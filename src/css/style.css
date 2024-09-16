@@ -32,8 +32,16 @@
 }
 
 :root {
-    --accent: #a6e3a1;
-    --bg: #181825;
+    --accent: #a6d189;
+    --bg: #292c3c; /* Можна трохи світліший фон */
+}
+
+/* Темна тема */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent: #a6e3a1;
+        --bg: #181825;
+    }
 }
 
 body {
