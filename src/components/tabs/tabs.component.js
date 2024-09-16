@@ -175,6 +175,7 @@ class Tabs extends Component {
       }
     }
     
+      @media (prefers-color-scheme: light) {
       .categories .links {
           right: 0;
           width: 70%;
@@ -183,7 +184,7 @@ class Tabs extends Component {
           padding: 5%;
           flex-wrap: wrap;
       }
-
+    }
 
       .categories .links li {
           list-style: none;
