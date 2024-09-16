@@ -1,12 +1,10 @@
-  @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
-
 class Links extends Component {
   constructor() {
     super();
   }
 
   static getIcon(link) {
-    const defaultColor = var(--ctp-mocha-base);
+    const defaultColor = "#1e1e2e";
 
     return link.icon
       ? `<i class="ti ti-${link.icon} link-icon"
@@ -86,14 +84,6 @@ class Tabs extends Component {
 
   style() {
     return `
-      status-bar {
-          bottom: -70px;
-          height: 32px;
-          background: #1e1e2e;
-          border-radius: 4px;
-          box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
-      }
-
       #panels, #panels ul,
       #panels .links {
           position: absolute;
@@ -103,21 +93,6 @@ class Tabs extends Component {
           color: #fff;
       }
 
-      @media (prefers-color-scheme: dark) {
-      #panels {
-          border-radius: 5px 0 0 5px;
-          width: 90%;
-          max-width: 1200px;
-          height: 450px;
-          right: 0;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-          background: #1e1e2e;
-      }
-    }
 
       .categories {
           width: 100%;
@@ -177,24 +152,21 @@ class Tabs extends Component {
           padding: 5%;
           flex-wrap: wrap;
       }
-    }
-    
-      @media (prefers-color-scheme: light) {
-      .categories .links {
+
+      #panels {
+          border-radius: 5px 0 0 5px;
+          width: 90%;
+          max-width: 1200px;
+          height: 450px;
           right: 0;
-          width: 70%;
-          height: 100%;
-          background: #303446;
-          padding: 5%;
-          flex-wrap: wrap;
-      }
-    }
-
-      .categories .links li {
-          list-style: none;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+          background: #1e1e2e;
       }
 
-      @media (prefers-color-scheme: dark) {
       .categories ul .links a {
           color: #cdd6f4;
           text-decoration: none;
@@ -208,9 +180,40 @@ class Tabs extends Component {
           border-radius: 2px;
           margin-bottom: .7em;
       }
-    }
 
+      status-bar {
+          bottom: -70px;
+          height: 32px;
+          background: #1e1e2e;
+          border-radius: 4px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+      }
+    }
+    
       @media (prefers-color-scheme: light) {
+      .categories .links {
+          right: 0;
+          width: 70%;
+          height: 100%;
+          background: #303446;
+          padding: 5%;
+          flex-wrap: wrap;
+      }
+
+      #panels {
+          border-radius: 5px 0 0 5px;
+          width: 90%;
+          max-width: 1200px;
+          height: 450px;
+          right: 0;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+          background: #303446;
+      }
+
       .categories ul .links a {
           color: #c6d0f5;
           text-decoration: none;
@@ -224,7 +227,21 @@ class Tabs extends Component {
           border-radius: 2px;
           margin-bottom: .7em;
       }
+
+      status-bar {
+          bottom: -70px;
+          height: 32px;
+          background: #292c3c;
+          border-radius: 4px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+      }
     }
+
+      .categories .links li {
+          list-style: none;
+      }
+
+
  
       .categories .link-info {
           display: inline-flex;
