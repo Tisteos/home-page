@@ -1,10 +1,12 @@
+  @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
 class Links extends Component {
   constructor() {
     super();
   }
 
   static getIcon(link) {
-    const defaultColor = "#1e1e2e";
+    const defaultColor = var(--ctp-mocha-base);
 
     return link.icon
       ? `<i class="ti ti-${link.icon} link-icon"
@@ -101,6 +103,7 @@ class Tabs extends Component {
           color: #fff;
       }
 
+      @media (prefers-color-scheme: dark) {
       #panels {
           border-radius: 5px 0 0 5px;
           width: 90%;
@@ -114,6 +117,7 @@ class Tabs extends Component {
           box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
           background: #1e1e2e;
       }
+    }
 
       .categories {
           width: 100%;

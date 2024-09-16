@@ -1,3 +1,4 @@
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
 @charset "UTF-8";
 
 * {
@@ -33,8 +34,7 @@
 
 :root {
     --accent: #a6d189;
-    --bg: #292c3c; /* Можна трохи світліший фон */
-}
+    --bg: var(--ctp-frappe-mantle); }
 
 /* Темна тема */
 @media (prefers-color-scheme: dark) {
