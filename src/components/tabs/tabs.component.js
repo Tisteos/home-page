@@ -164,6 +164,7 @@ class Tabs extends Component {
           z-index: 1;
       }
 
+      @media (prefers-color-scheme: dark) {
       .categories .links {
           right: 0;
           width: 70%;
@@ -172,6 +173,17 @@ class Tabs extends Component {
           padding: 5%;
           flex-wrap: wrap;
       }
+    }
+    
+      .categories .links {
+          right: 0;
+          width: 70%;
+          height: 100%;
+          background: #303446;
+          padding: 5%;
+          flex-wrap: wrap;
+      }
+
 
       .categories .links li {
           list-style: none;
