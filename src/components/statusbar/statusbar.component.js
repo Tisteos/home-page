@@ -167,6 +167,7 @@ class Statusbar extends Component {
           background: rgb(255 255 255 / 10%);
       }
 
+      @media (prefers-color-scheme: dark) {
       .fastlink {
           border: 0;
           background: #181825;
@@ -174,6 +175,18 @@ class Statusbar extends Component {
           cursor: pointer;
           border-radius: 5px 15px 15px 5px;
       }
+    }
+
+      @media (prefers-color-scheme: light) {
+      .fastlink {
+          border: 0;
+          background: #292c3c;
+          color: #a6d189;
+          cursor: pointer;
+          border-radius: 5px 15px 15px 5px;
+      }
+    }
+
 
       .fastlink:hover {
           filter: brightness(1.2);
