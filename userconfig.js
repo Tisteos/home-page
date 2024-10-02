@@ -18,7 +18,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
 const default_config = {
   overrideStorage: true,
   temperature: {
-    location: "London",
+    location: "Kyiv",
     scale: "C",
   },
   clock: {

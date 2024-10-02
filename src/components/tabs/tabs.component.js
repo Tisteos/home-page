@@ -279,7 +279,7 @@ class Tabs extends Component {
           height: 250px;
           padding: 1em;
           margin: auto;
-          border-radius: 5px;
+          border-radius: 10px;
           box-shadow: inset 0 0 0 2px var(--flavour);
           left: calc(15% - 42.5px);
           bottom: 0;
@@ -292,7 +292,6 @@ class Tabs extends Component {
           flex-wrap: wrap;
           word-break: break-all;
           align-items: center;
-          backdrop-filter: blur(3px);
       }
 
 
