@@ -1,4 +1,5 @@
 let saved_config = JSON.parse(localStorage.getItem("CONFIG"));
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
 const default_config = {
   overrideStorage: true,
@@ -34,7 +35,7 @@ const default_config = {
               name: "reddit",
               url: "https://reddit.com",
               icon: "brand-reddit",
-              icon_color: "#a6e3a1",
+              icon_color: theme === 'dark' ? "#a6e3a1" : "#4a7c4f",
             },
             {
               name: "mastodon",

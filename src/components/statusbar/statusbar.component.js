@@ -181,7 +181,7 @@ class Statusbar extends Component {
       @media (prefers-color-scheme: light) {
       .fastlink {
           border: 0;
-          background: #292c3c;
+          background: #232634;
           color: #a6d189;
           cursor: pointer;
           border-radius: 5px 15px 15px 5px;
