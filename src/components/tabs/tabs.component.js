@@ -188,6 +188,13 @@ class Tabs extends Component {
           border-radius: 4px;
           box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
       }
+
+      .categories .links li:not(:last-child) {
+          box-shadow: 0 1px 0 #313244;
+          padding: 0 0 .5em 0;
+          margin-bottom: 1.5em;
+      }
+
     }
     
       @media (prefers-color-scheme: light) {
@@ -235,6 +242,13 @@ class Tabs extends Component {
           border-radius: 4px;
           box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
       }
+
+      .categories .links li:not(:last-child) {
+          box-shadow: 0 1px 0 #414559;
+          padding: 0 0 .5em 0;
+          margin-bottom: 1.5em;
+      }
+
     }
 
       .categories .links li {
@@ -281,11 +295,6 @@ class Tabs extends Component {
           backdrop-filter: blur(3px);
       }
 
-      .categories .links li:not(:last-child) {
-          box-shadow: 0 1px 0 #313244;
-          padding: 0 0 .5em 0;
-          margin-bottom: 1.5em;
-      }
 
       .categories .links li h1 {
           color: #cdd6f4;
