@@ -177,6 +177,7 @@ class Statusbar extends Component {
       }
     }
 
+
       @media (prefers-color-scheme: light) {
       .fastlink {
           border: 0;
