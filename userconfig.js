@@ -1,6 +1,20 @@
 let saved_config = JSON.parse(localStorage.getItem("CONFIG"));
 const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
+const checkTheme = () => {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
+let currentTheme = checkTheme();
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  const newTheme = e.matches ? 'dark' : 'light';
+
+  if (newTheme !== currentTheme) {
+    location.reload();
+  }
+});
+
 const default_config = {
   overrideStorage: true,
   temperature: {
