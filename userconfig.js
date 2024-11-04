@@ -81,8 +81,8 @@ const default_config = {
               icon_color: theme === 'dark' ? "#a6e3a1" : "#a6d189",
             },
             {
-              name: "higotv",
-              url: "https://higotv.fun/",
+              name: "hikka",
+              url: "https://https://hikka.io/",
               icon: "device-tv",
               icon_color: theme === 'dark' ? "#cba6f7" : "#ca9ee6",
             },
