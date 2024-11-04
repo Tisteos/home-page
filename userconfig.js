@@ -82,7 +82,7 @@ const default_config = {
             },
             {
               name: "hikka",
-              url: "https://https://hikka.io/",
+              url: "https://hikka.io/",
               icon: "device-tv",
               icon_color: theme === 'dark' ? "#cba6f7" : "#ca9ee6",
             },
