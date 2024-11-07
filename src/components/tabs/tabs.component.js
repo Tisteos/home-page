@@ -99,7 +99,7 @@ class Tabs extends Component {
           height: 100%;
           overflow: hidden;
           position: relative;
-          border-radius: 10px 0 0 10px;
+          border-radius: 4px 0 0 4px;
       }
 
       .categories ul {
@@ -154,7 +154,7 @@ class Tabs extends Component {
       }
 
       #panels {
-          border-radius: 5px 0 0 5px;
+          border-radius: 4px 0 0 4px;
           width: 90%;
           max-width: 1200px;
           height: 450px;
@@ -208,7 +208,7 @@ class Tabs extends Component {
       }
 
       #panels {
-          border-radius: 5px 0 0 5px;
+          border-radius: 4px 0 0 4px;
           width: 90%;
           max-width: 1200px;
           height: 450px;
@@ -279,7 +279,7 @@ class Tabs extends Component {
           height: 250px;
           padding: 1em;
           margin: auto;
-          border-radius: 10px;
+          border-radius: 4px;
           box-shadow: inset 0 0 0 2px var(--flavour);
           left: calc(15% - 42.5px);
           bottom: 0;
