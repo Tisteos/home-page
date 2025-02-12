@@ -1,19 +1,25 @@
 let saved_config = JSON.parse(localStorage.getItem("CONFIG"));
-const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "light";
 
 const checkTheme = () => {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
 };
 
 let currentTheme = checkTheme();
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-  const newTheme = e.matches ? 'dark' : 'light';
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (e) => {
+    const newTheme = e.matches ? "dark" : "light";
 
-  if (newTheme !== currentTheme) {
-    location.reload();
-  }
-});
+    if (newTheme !== currentTheme) {
+      location.reload();
+    }
+  });
 
 const default_config = {
   overrideStorage: true,
@@ -49,25 +55,25 @@ const default_config = {
               name: "reddit",
               url: "https://reddit.com",
               icon: "brand-reddit",
-              icon_color: theme === 'dark' ? "#a6e3a1" : "#a6d189",
+              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
               name: "mastodon",
               url: "https://twiukraine.com/home",
               icon: "brand-mastodon",
-              icon_color: theme === 'dark' ? "#cba6f7" : "#ca9ee6",
+              icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
             },
             {
               name: "freetube",
               url: "https://youtube.com/",
               icon: "brand-youtube",
-              icon_color: theme === 'dark' ? "#f38ba8" : "#e78284",
+              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
             },
             {
               name: "куток",
               url: "https://kutok.io",
               icon: "border-radius",
-              icon_color: theme === 'dark' ? "#89b4fa" : "#8caaee",
+              icon_color: theme === "dark" ? "#89b4fa" : "#8caaee",
             },
           ],
         },
@@ -78,25 +84,25 @@ const default_config = {
               name: "anitube",
               url: "https://anitube.in.ua/",
               icon: "player-play",
-              icon_color: theme === 'dark' ? "#a6e3a1" : "#a6d189",
+              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
               name: "hikka",
               url: "https://hikka.io/",
               icon: "device-tv",
-              icon_color: theme === 'dark' ? "#cba6f7" : "#ca9ee6",
+              icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
             },
             {
               name: "animeua",
               url: "https://animeua.club/",
               icon: "player-pause",
-              icon_color: theme === 'dark' ? "#f38ba8" : "#e78284",
+              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
             },
             {
               name: "nekoteka",
               url: "https://nekoteka.com/anime",
               icon: "paw",
-              icon_color: theme === 'dark' ? "#89b4fa" : "#8caaee",
+              icon_color: theme === "dark" ? "#89b4fa" : "#8caaee",
             },
           ],
         },
@@ -107,25 +113,25 @@ const default_config = {
               name: "gemini",
               url: "https://gemini.google.com/app",
               icon: "artboard",
-              icon_color: theme === 'dark' ? "#a6e3a1" : "#a6d189",
+              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
               name: "chatgpt",
               url: "https://chatgpt.com/",
               icon: "brain",
-              icon_color: theme === 'dark' ? "#cba6f7" : "#ca9ee6",
+              icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
             },
             {
               name: "agnai",
               url: "https://agnai.chat/",
               icon: "robot",
-              icon_color: theme === 'dark' ? "#f38ba8" : "#e78284",
+              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
             },
             {
               name: "deepl",
               url: "https://www.deepl.com/translator",
               icon: "language",
-              icon_color: theme === 'dark' ? "#89b4fa" : "#8caaee",
+              icon_color: theme === "dark" ? "#89b4fa" : "#8caaee",
             },
           ],
         },
@@ -142,13 +148,13 @@ const default_config = {
               name: "dotfiles",
               url: "https://github.com/Tisteos/dotfiles",
               icon: "brand-github",
-              icon_color: "#a6e3a1",
+              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
               name: "unixporn",
               url: "https://www.reddit.com/r/unixporn/",
               icon: "align-box-top-right",
-              icon_color: "#cba6f7",
+              icon_color: theme === "dark" ? "#fab387" : "#ef9f76",
             },
           ],
         },
@@ -156,22 +162,23 @@ const default_config = {
           name: "challenges",
           links: [
             {
-              name: "kaggle",
-              url: "https://www.kaggle.com/volodymyrpivoshenko",
-              icon: "brain",
-              icon_color: "#a6e3a1",
+              name: "learncpp",
+              url: "https://www.learncpp.com/",
+              icon: "nf-custom-cpp",
+              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
+            {
             {
               name: "leetcode",
               url: "https://leetcode.com",
               icon: "code-plus",
-              icon_color: "#fab387",
+              icon_color: theme === "dark" ? "#fab387" : "#ef9f76",
             },
             {
               name: "stackoverflow",
               url: "https://stackoverflow.com",
               icon: "brand-stackoverflow",
-              icon_color: "#f38ba8",
+              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
             },
           ],
         },
@@ -182,25 +189,19 @@ const default_config = {
               name: "dou",
               url: "https://dou.ua",
               icon: "brand-prisma",
-              icon_color: "#a6e3a1",
+              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
               name: "hackernews",
               url: "https://news.ycombinator.com",
               icon: "brand-redhat",
-              icon_color: "#fab387",
+              icon_color: theme === "dark" ? "#fab387" : "#ef9f76",
             },
             {
               name: "uber research",
               url: "https://eng.uber.com/category/articles",
               icon: "brand-uber",
-              icon_color: "#f38ba8",
-            },
-            {
-              name: "google research",
-              url: "https://blog.research.google",
-              icon: "hexagon-letter-g",
-              icon_color: "#89b4fa",
+              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
             },
           ],
         },
