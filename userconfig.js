@@ -168,7 +168,6 @@ const default_config = {
               icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
-            {
               name: "leetcode",
               url: "https://leetcode.com",
               icon: "code-plus",
