@@ -163,8 +163,8 @@ const default_config = {
           links: [
             {
               name: "learncpp",
-              url: "https://www.learncpp.com/",
-              icon: "nf-custom-cpp",
+              url: "https://www.learncpp.com",
+              icon: "code",
               icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
