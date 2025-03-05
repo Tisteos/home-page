@@ -146,7 +146,7 @@ const default_config = {
           links: [
             {
               name: "dotfiles",
-              url: "https://github.com/Tisteos/dotfiles",
+              url: "https://codeberg.org/tisteos/dotfiles",
               icon: "brand-github",
               icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
