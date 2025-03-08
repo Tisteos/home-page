@@ -58,9 +58,9 @@ const default_config = {
               icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
-              name: "mastodon",
-              url: "https://twiukraine.com/home",
-              icon: "brand-mastodon",
+              name: "Ukrkey",
+              url: "https://shkey.cakestwix.com/",
+              icon: "nf-md-shark_fin",
               icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
             },
             {
