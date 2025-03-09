@@ -60,12 +60,12 @@ const default_config = {
             {
               name: "Ukrkey",
               url: "https://shkey.cakestwix.com/",
-              icon: "nf-md-shark_fin",
+              icon: "fish",
               icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
             },
             {
               name: "freetube",
-              url: "https://youtube.com/",
+              url: "http/",
               icon: "brand-youtube",
               icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
             },
@@ -164,7 +164,7 @@ const default_config = {
             {
               name: "learncpp",
               url: "https://www.learncpp.com",
-              icon: "code",
+              icon: "brand-cpp",
               icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
