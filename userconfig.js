@@ -107,24 +107,24 @@ const default_config = {
           ],
         },
         {
-          name: "ai",
+          name: "resources",
           links: [
             {
-              name: "gemini",
-              url: "https://gemini.google.com/app",
-              icon: "artboard",
+              name: "dotfiles",
+              url: "https://codeberg.org/tisteos/dotfiles",
+              icon: "brand-github",
               icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
             },
             {
-              name: "chatgpt",
-              url: "https://chatgpt.com/",
-              icon: "brain",
+              name: "unixporn",
+              url: "https://www.reddit.com/r/unixporn/",
+              icon: "align-box-top-right",
               icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
             },
             {
-              name: "agnai",
-              url: "https://agnai.chat/",
-              icon: "robot",
+              name: "learncpp",
+              url: "https://www.learncpp.com",
+              icon: "brand-cpp",
               icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
             },
             {
