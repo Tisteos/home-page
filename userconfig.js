@@ -59,7 +59,7 @@ const default_config = {
             },
             {
               name: "Ukrkey",
-              url: "https://shkey.cakestwix.com/",
+              url: "https://twink.men/",
               icon: "fish",
               icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
             },
