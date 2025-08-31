@@ -62,7 +62,7 @@ class Weather extends Component {
 
       .weather-temperature {
           font: 300 9pt 'Roboto', sans-serif;
-          color: #cdd6f4;
+          color: var(--text);
           white-space: nowrap;
           display: flex;
           align-items: center;
@@ -94,11 +94,11 @@ class Weather extends Component {
       }
 
       .weather-condition-icon.sunny {
-          color: #f9e2af;
+          color: var(--yellow);
       }
 
       .weather-condition-icon.cloudy {
-          color: #89b4fa;
+          color: var(--blue);
       }
     `;
   }
@@ -154,7 +154,8 @@ class Weather extends Component {
   }
 
   getForecast(condition) {
-    for (const forecast of this.forecasts) if (forecast.conditions.includes(condition)) return forecast;
+    for (const forecast of this.forecasts)
+      if (forecast.conditions.includes(condition)) return forecast;
 
     return this.forecasts[0];
   }

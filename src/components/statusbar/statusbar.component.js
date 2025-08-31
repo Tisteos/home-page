@@ -23,7 +23,11 @@ class Statusbar extends Component {
   }
 
   imports() {
-    return [this.resources.fonts.roboto, this.resources.icons.material, this.resources.libs.awoo];
+    return [
+      this.resources.fonts.roboto,
+      this.resources.icons.material,
+      this.resources.libs.awoo,
+    ];
   }
 
   style() {
@@ -74,7 +78,7 @@ class Statusbar extends Component {
       }
 
       #tabs ul li:not(:last-child):hover {
-          background: #181825;
+          background: var(--mantle);
       }
 
       #tabs ul li:last-child {
@@ -87,7 +91,7 @@ class Statusbar extends Component {
       }
 
       #tabs ul li[active]:not(:last-child) {
-          color: #cdd6f4;
+          color: var(--text);
           font-size: 13px;
           padding: 6px 0;
       }
@@ -98,26 +102,26 @@ class Statusbar extends Component {
       #tabs ul li[active]:nth-child(5) ~ li:last-child { margin: 0 0 0 140px; }
 
       #tabs ul li[active]:nth-child(2) ~ li:last-child {
-          --flavour: #fab387;
+          --flavour: var(--peach);
       }
 
       #tabs ul li[active]:nth-child(3) ~ li:last-child {
-          --flavour: #f38ba8;
+          --flavour: var(--red);
       }
 
       #tabs ul li[active]:nth-child(4) ~ li:last-child {
-          --flavour: #94e2d5;
+          --flavour: var(--teal);
       }
 
       #tabs ul li[active]:nth-child(5) ~ li:last-child {
-          --flavour: #f5c2e7;
+          --flavour: var(--pink);
       }
 
       .widgets {
           right: 0;
           margin: auto;
           height: 32px;
-          color: #fff;
+          color: color(--text);
           font-size: 12px;
       }
 
@@ -170,8 +174,8 @@ class Statusbar extends Component {
       @media (prefers-color-scheme: dark) {
       .fastlink {
           border: 0;
-          background: #181825;
-          color: #a6e3a1;
+          background: var(--mantle);
+          color: var(--green);
           cursor: pointer;
           border-radius: 5px 15px 15px 5px;
       }
@@ -216,7 +220,9 @@ class Statusbar extends Component {
   }
 
   setEvents() {
-    this.refs.tabs.forEach((tab) => (tab.onclick = ({ target }) => this.handleTabChange(target)));
+    this.refs.tabs.forEach(
+      (tab) => (tab.onclick = ({ target }) => this.handleTabChange(target)),
+    );
 
     document.onkeydown = (e) => this.handleKeyPress(e);
     document.onwheel = (e) => this.handleWheelScroll(e);
@@ -262,7 +268,9 @@ class Statusbar extends Component {
     if (wheelDelta > 0) {
       this.activateByKey((activeTab + 1) % (this.refs.tabs.length - 1));
     } else {
-      this.activateByKey(activeTab - 1 < 0 ? this.refs.tabs.length - 2 : activeTab - 1);
+      this.activateByKey(
+        activeTab - 1 < 0 ? this.refs.tabs.length - 2 : activeTab - 1,
+      );
     }
   }
 
@@ -273,7 +281,10 @@ class Statusbar extends Component {
 
     if (target.shadow && target.shadow.activeElement) return;
 
-    if (Number.isInteger(parseInt(key)) && key <= this.externalRefs.categories.length) {
+    if (
+      Number.isInteger(parseInt(key)) &&
+      key <= this.externalRefs.categories.length
+    ) {
       this.activateByKey(key - 1);
     }
   }
@@ -283,7 +294,10 @@ class Statusbar extends Component {
     this.currentTabIndex = key;
 
     this.activate(this.refs.tabs, this.refs.tabs[key]);
-    this.activate(this.externalRefs.categories, this.externalRefs.categories[key]);
+    this.activate(
+      this.externalRefs.categories,
+      this.externalRefs.categories[key],
+    );
   }
 
   createTabs() {
