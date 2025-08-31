@@ -1,0 +1,31 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rosewater: #f2d5cf;
+    --flamingo: #ebbcba;
+    --pink: #f4b8e4;
+    --mauve: #c4a7e7;
+    --red: #eb6f92;
+    --maroon: #ea9a97;
+    --peach: #ef9f76;
+    --yellow: #f6c177;
+    --green: #3e8fb0;
+    --teal: #81c8be;
+    --sky: #99d1db;
+    --sapphire: #85c1dc;
+    --blue: #9ccfd8;
+    --lavender: #c4a7e7;
+    --text: #e0def4;
+    --subtext1: #b5bfe2;
+    --subtext0: #908caa;
+    --overlay2: #26233a;
+    --overlay1: #26233a;
+    --overlay0: #26233a;
+    --surface2: #1f1d2e;
+    --surface1: #1f1d2e;
+    --surface0: #1f1d2e;
+    --base: #191724;
+    --mantle: #191724;
+    --crust: #191724;
+    --accent: var(--rosewater);
+  }
+}

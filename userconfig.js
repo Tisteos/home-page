@@ -11,25 +11,17 @@ const checkTheme = () => {
 
 let currentTheme = checkTheme();
 
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", (e) => {
-    const newTheme = e.matches ? "dark" : "light";
-
-    if (newTheme !== currentTheme) {
-      location.reload();
-    }
-  });
+window.matchMedia("(prefers-color-scheme: dark)");
 
 const default_config = {
   overrideStorage: true,
   temperature: {
-    location: "Kyiv",
+    location: "Vinnytsia",
     scale: "C",
   },
   clock: {
     format: "h:i p",
-    iconColor: "#f38ba8",
+    iconColor: "var(--red)",
   },
   search: {
     engines: {
@@ -55,25 +47,25 @@ const default_config = {
               name: "reddit",
               url: "https://reddit.com",
               icon: "brand-reddit",
-              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
+              icon_color: "var(--green)",
             },
             {
               name: "Ukrkey",
               url: "https://twink.men/",
               icon: "fish",
-              icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
+              icon_color: "var(--mauve)",
             },
             {
               name: "youtube",
               url: "https://www.youtube.com/",
               icon: "brand-youtube",
-              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
+              icon_color: "var(--red)",
             },
             {
               name: "куток",
               url: "https://kutok.io",
               icon: "border-radius",
-              icon_color: theme === "dark" ? "#89b4fa" : "#8caaee",
+              icon_color: "var(--blue)",
             },
           ],
         },
@@ -84,25 +76,25 @@ const default_config = {
               name: "anitube",
               url: "https://anitube.in.ua/",
               icon: "player-play",
-              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
+              icon_color: "var(--green)",
             },
             {
               name: "hikka",
               url: "https://hikka.io/",
               icon: "device-tv",
-              icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
+              icon_color: "var(--mauve)",
             },
             {
               name: "animeua",
               url: "https://animeua.club/",
               icon: "player-pause",
-              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
+              icon_color: "var(--red)",
             },
             {
               name: "nekoteka",
               url: "https://nekoteka.com/anime",
               icon: "paw",
-              icon_color: theme === "dark" ? "#89b4fa" : "#8caaee",
+              icon_color: "var(--blue)",
             },
           ],
         },
@@ -113,25 +105,25 @@ const default_config = {
               name: "dotfiles",
               url: "https://codeberg.org/tisteos/dotfiles",
               icon: "brand-github",
-              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
+              icon_color: "var(--green)",
             },
             {
               name: "unixporn",
               url: "https://www.reddit.com/r/unixporn/",
               icon: "align-box-top-right",
-              icon_color: theme === "dark" ? "#cba6f7" : "#ca9ee6",
+              icon_color: "var(--mauve)",
             },
             {
               name: "learncpp",
               url: "https://www.learncpp.com",
               icon: "brand-cpp",
-              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
+              icon_color: "var(--red)",
             },
             {
               name: "deepl",
               url: "https://www.deepl.com/translator",
               icon: "language",
-              icon_color: theme === "dark" ? "#89b4fa" : "#8caaee",
+              icon_color: "var(--blue)",
             },
           ],
         },
@@ -148,13 +140,13 @@ const default_config = {
               name: "dotfiles",
               url: "https://codeberg.org/tisteos/dotfiles",
               icon: "brand-github",
-              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
+              icon_color: "var(--green)",
             },
             {
               name: "unixporn",
               url: "https://www.reddit.com/r/unixporn/",
               icon: "align-box-top-right",
-              icon_color: theme === "dark" ? "#fab387" : "#ef9f76",
+              icon_color: "var(--peach)",
             },
           ],
         },
@@ -165,19 +157,19 @@ const default_config = {
               name: "learncpp",
               url: "https://www.learncpp.com",
               icon: "brand-cpp",
-              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
+              icon_color: "var(--green)",
             },
             {
               name: "leetcode",
               url: "https://leetcode.com",
               icon: "code-plus",
-              icon_color: theme === "dark" ? "#fab387" : "#ef9f76",
+              icon_color: "var(--peach)",
             },
             {
               name: "stackoverflow",
               url: "https://stackoverflow.com",
               icon: "brand-stackoverflow",
-              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
+              icon_color: "var(--red)",
             },
           ],
         },
@@ -188,19 +180,19 @@ const default_config = {
               name: "dou",
               url: "https://dou.ua",
               icon: "brand-prisma",
-              icon_color: theme === "dark" ? "#a6e3a1" : "#a6d189",
+              icon_color: "var(--green)",
             },
             {
               name: "hackernews",
               url: "https://news.ycombinator.com",
               icon: "brand-redhat",
-              icon_color: theme === "dark" ? "#fab387" : "#ef9f76",
+              icon_color: "var(--peach)",
             },
             {
               name: "uber research",
               url: "https://eng.uber.com/category/articles",
               icon: "brand-uber",
-              icon_color: theme === "dark" ? "#f38ba8" : "#e78284",
+              icon_color: "var(--red)",
             },
           ],
         },
