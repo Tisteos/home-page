@@ -50,8 +50,8 @@ const default_config = {
               icon_color: "var(--green)",
             },
             {
-              name: "Ukrkey",
-              url: "https://twink.men/",
+              name: "Sharkey",
+              url: "https://transfem.social/",
               icon: "fish",
               icon_color: "var(--mauve)",
             },
@@ -62,9 +62,9 @@ const default_config = {
               icon_color: "var(--red)",
             },
             {
-              name: "куток",
-              url: "https://kutok.io",
-              icon: "border-radius",
+              name: "Ukrkey",
+              url: "https://twink.men/",
+              icon: "fish",
               icon_color: "var(--blue)",
             },
           ],
